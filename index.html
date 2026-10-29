@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Manolifts | Physique Transformation & Online Coaching</title>
+<meta name="theme-color" content="#08080a">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<style>
+:root{
+  color-scheme:dark;
+  --bg:#08080a; --card:#121216; --line:#24242b; --text:#f3f3f1; --muted:#9a9aa3; --accent:#ff5a36; --accent2:#ffb347;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--text);font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(600px 320px at 50% -80px,rgba(255,90,54,.16),transparent 70%)}
+.display{font-family:'Barlow Condensed','Arial Narrow',Impact,sans-serif;letter-spacing:.01em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px}
+.link{display:flex;align-items:center;gap:14px;width:100%;padding:15px 18px;background:var(--card);border:1px solid var(--line);
+  border-radius:14px;font-weight:600;transition:transform .2s,border-color .2s,box-shadow .2s}
+.link:hover,.link:focus-visible{transform:translateY(-2px);border-color:#46464f;box-shadow:0 8px 28px -10px rgba(255,255,255,.14)}
+.link svg{width:22px;height:22px;flex:none;color:var(--muted);transition:color .2s}
+.link:hover svg{color:var(--text)}
+.cta{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:17px 20px;border-radius:14px;
+  font-weight:700;color:#150904;background:linear-gradient(100deg,var(--accent),var(--accent2));
+  box-shadow:0 0 0 1px rgba(255,255,255,.12) inset,0 10px 34px -8px rgba(255,90,54,.55);transition:transform .2s,box-shadow .2s}
+.cta:hover,.cta:focus-visible{transform:translateY(-2px);box-shadow:0 0 0 1px rgba(255,255,255,.2) inset,0 14px 44px -6px rgba(255,90,54,.75)}
+.cta.pulse::after{content:"";position:absolute;inset:-1px;border-radius:15px;border:1px solid var(--accent2);animation:ring 2.6s ease-out infinite;pointer-events:none}
+@keyframes ring{0%{opacity:.7;transform:scale(1)}100%{opacity:0;transform:scale(1.06,1.3)}}
+.avatar{width:104px;height:104px;border-radius:50%;padding:3px;background:conic-gradient(from 200deg,var(--accent),var(--accent2),#2a2a31,var(--accent));}
+.avatar>div{width:100%;height:100%;border-radius:50%;background:#0d0d10;display:grid;place-items:center;font-size:40px;font-weight:800;color:var(--text)}
+.field{width:100%;background:#0c0c0f;border:1px solid var(--line);border-radius:12px;padding:13px 14px;color:var(--text);font:inherit;font-size:16px}
+.field:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px rgba(255,90,54,.2)}
+.feat{display:flex;gap:14px;padding:16px;align-items:flex-start}
+.feat .ic{flex:none;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;background:rgba(255,90,54,.1);color:var(--accent);border:1px solid rgba(255,90,54,.25)}
+.feat .ic svg{width:20px;height:20px}
+#modal{position:fixed;inset:0;z-index:50;display:none;align-items:flex-end;justify-content:center;background:rgba(0,0,0,.72);backdrop-filter:blur(6px)}
+#modal.open{display:flex}
+.sheet{width:100%;max-width:460px;max-height:92%;overflow:auto;background:var(--card);border:1px solid var(--line);border-radius:22px 22px 0 0;padding:24px 20px calc(24px + env(safe-area-inset-bottom,0px));animation:up .28s ease-out}
+@media(min-width:520px){#modal{align-items:center}.sheet{border-radius:22px}}
+@keyframes up{from{transform:translateY(40px);opacity:0}to{transform:none;opacity:1}}
+:focus-visible{outline:2px solid var(--accent2);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+*,*::before,*::after{box-sizing:border-box}body{margin:0}h1,h2,h3,p,ul{margin:0}ul{padding:0;list-style:none}button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}a{color:inherit;text-decoration:none}
+.mx-auto{margin-left:auto;margin-right:auto}.w-full{width:100%}.max-w-\[460px\]{max-width:460px}.px-5{padding-left:1.25rem;padding-right:1.25rem}.pt-10{padding-top:2.5rem}.pb-12{padding-bottom:3rem}.py-8{padding-top:2rem;padding-bottom:2rem}.p-2{padding:.5rem}.-m-2{margin:-.5rem}
+.flex{display:flex}.grid{display:grid}.flex-col{flex-direction:column}.items-center{align-items:center}.items-start{align-items:flex-start}.justify-between{justify-content:space-between}.justify-center{justify-content:center}.self-center{align-self:center}.place-items-center{place-items:center}.grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.gap-3{gap:.75rem}.gap-4{gap:1rem}.text-center{text-align:center}.rounded-full{border-radius:9999px}.h-14{height:3.5rem}.w-14{width:3.5rem}
+.mt-1{margin-top:.25rem}.mt-2{margin-top:.5rem}.mt-3{margin-top:.75rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.mt-7{margin-top:1.75rem}.mt-8{margin-top:2rem}.mt-14{margin-top:3.5rem}.mt-16{margin-top:4rem}.mb-4{margin-bottom:1rem}
+.text-xs{font-size:.75rem;line-height:1rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[15px\]{font-size:15px}.text-\[30px\]{font-size:30px}.text-\[34px\]{font-size:34px}.text-\[44px\]{font-size:44px}
+.font-semibold{font-weight:600}.font-bold{font-weight:700}.font-extrabold{font-weight:800}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-\[\.95\]{line-height:.95}
+.hidden{display:none}
+</style>
+</head>
+<body>
+<main class="mx-auto w-full max-w-[460px] px-5 pt-10 pb-12">
+
+  <!-- PROFILE -->
+  <header class="flex flex-col items-center text-center">
+    <div class="avatar"><div class="display" aria-label="Avatar placeholder">M</div></div>
+    <h1 class="display mt-5 text-[34px] font-extrabold leading-none">@manolifts</h1>
+    <p class="mt-2 text-[15px] font-semibold" style="color:var(--accent2)">High-Performance Physique Transformation</p>
+    <p class="mt-1 text-sm" style="color:var(--muted)">Physique Transformation &amp; Online Coaching</p>
+  </header>
+
+  <!-- LINKS -->
+  <nav class="mt-8 flex flex-col gap-3" aria-label="Links">
+    <button class="cta pulse" data-open-modal type="button">
+      Apply for The Ultimate Physique Guide
+    </button>
+    <a class="link" data-link="tiktok" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.7a4.8 4.8 0 0 1-3-1.6A4.8 4.8 0 0 1 15.4 2h-3.3v13.4a2.9 2.9 0 1 1-2-2.8V9.2a6.2 6.2 0 1 0 5.3 6.2V8.8a8 8 0 0 0 4.2 1.3z"/></svg>
+      TikTok
+    </a>
+    <a class="link" data-link="instagram" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>
+      Instagram
+    </a>
+    <a class="link" data-link="youtube" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.200 5 12 5 12 5s-6.200 0-7.800.4A2.5 2.5 0 0 0 2.400 7.200C2 8.800 2 12 2 12s0 3.200.4 4.800a2.500 2.500 0 0 0 1.800 1.800C5.800 19 12 19 12 19s6.200 0 7.800-.4a2.500 2.500 0 0 0 1.800-1.800c.4-1.600.4-4.800.4-4.800s0-3.200-.4-4.800zM10 15V9l5.200 3z"/></svg>
+      YouTube
+    </a>
+    <a class="link" data-link="whatsapp" href="#" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21l1.6-4.800A8.500 8.500 0 1 1 8 19.500z"/><path d="M9 9.500c0 3 2.500 5.500 5.500 5.500l1-1.500-2-1-1 .8a4 4 0 0 1-1.800-1.800l.8-1-1-2z"/></svg>
+      WhatsApp
+    </a>
+    <a class="link" data-link="email" href="#">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.500"/><path d="M3.500 7l8.500 6 8.500-6"/></svg>
+      Email me
+    </a>
+    <a href="#program" class="mt-1 self-center text-sm font-semibold" style="color:var(--muted)">See what&rsquo;s inside the program &darr;</a>
+  </nav>
+
+  <!-- PROGRAM -->
+  <section id="program" class="mt-16">
+    <h2 class="display text-[44px] font-extrabold leading-[.95]">The Ultimate Physique Guide</h2>
+    <p class="mt-4 text-[15px] leading-relaxed" style="color:var(--muted)">Tailored 1-on-1 coaching designed to build maximum muscle, shed body fat, and optimize your physique through data-driven tracking and custom programming.</p>
+
+    <ul class="card mt-7 divide-y" style="border-color:var(--line)">
+      <li class="feat">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 7v10M18 7v10M3 10v4M21 10v4M6 12h12"/></svg></span>
+        <div><h3 class="font-bold">Custom Hypertrophy Programming</h3><p class="mt-1 text-sm" style="color:var(--muted)">Training built around your body, schedule and weak points.</p></div>
+      </li>
+      <li class="feat" style="border-top:1px solid var(--line)">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></span>
+        <div><h3 class="font-bold">Precision Nutrition &amp; Macro Guidance</h3><p class="mt-1 text-sm" style="color:var(--muted)">Calories and macros set for your goal, adjusted as you progress.</p></div>
+      </li>
+      <li class="feat" style="border-top:1px solid var(--line)">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18M9 15l2 2 4-4"/></svg></span>
+        <div><h3 class="font-bold">Weekly Check-ins &amp; Form Reviews</h3><p class="mt-1 text-sm" style="color:var(--muted)">Send your progress and lifts every week. Get clear feedback and changes.</p></div>
+      </li>
+      <li class="feat" style="border-top:1px solid var(--line)">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a8 8 0 0 1-11.500 7.200L4 20.500l1.300-4.500A8 8 0 1 1 21 12z"/></svg></span>
+        <div><h3 class="font-bold">Direct 1-on-1 Messaging</h3><p class="mt-1 text-sm" style="color:var(--muted)">Message me anytime. Questions get answered and you stay accountable.</p></div>
+      </li>
+    </ul>
+
+    <div class="mt-7">
+      <button class="cta" data-open-modal type="button">Apply Now / Book a Call</button>
+      <p class="mt-3 text-center text-xs" style="color:var(--muted)">Limited coaching spots. Applications are reviewed personally.</p>
+    </div>
+  </section>
+
+  <footer class="mt-14 text-center text-xs" style="color:#5f5f68">&copy; <span id="yr"></span> Manolifts</footer>
+</main>
+
+<!-- APPLICATION MODAL -->
+<div id="modal" role="dialog" aria-modal="true" aria-labelledby="m-title" aria-hidden="true">
+  <div class="sheet">
+    <div class="flex items-start justify-between gap-4">
+      <div>
+        <h2 id="m-title" class="display text-[30px] font-extrabold leading-none">Apply for coaching</h2>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Fill this in and it opens WhatsApp with your answers ready to send to me.</p>
+      </div>
+      <button id="m-close" type="button" aria-label="Close" class="p-2 -m-2" style="color:var(--muted)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <form id="apply" class="mt-5 flex flex-col gap-3" novalidate>
+      <input class="field" name="name" placeholder="Full name" autocomplete="name" required>
+      <div class="grid grid-cols-3 gap-3">
+        <input class="field" name="age" type="number" inputmode="numeric" min="14" max="90" placeholder="Age" required>
+        <input class="field" name="height" placeholder="Height" required>
+        <input class="field" name="weight" placeholder="Weight" required>
+      </div>
+      <input class="field" name="handle" placeholder="Instagram or TikTok handle (optional)">
+      <select class="field" name="goal" required>
+        <option value="">Main goal</option>
+        <option>Build muscle</option><option>Lose body fat</option><option>Both: full recomposition</option><option>Prep for a competition</option>
+      </select>
+      <select class="field" name="experience" required>
+        <option value="">Training experience</option>
+        <option>Beginner (under 1 year)</option><option>Intermediate (1 to 3 years)</option><option>Advanced (3+ years)</option>
+      </select>
+      <select class="field" name="days" required>
+        <option value="">Days per week you can train</option>
+        <option>2 to 3 days</option><option>4 days</option><option>5 days</option><option>6 days</option>
+      </select>
+      <select class="field" name="gym" required>
+        <option value="">Where do you train?</option>
+        <option>Full gym</option><option>Home gym</option><option>Minimal equipment</option>
+      </select>
+      <textarea class="field" name="injuries" rows="2" placeholder="Injuries or limitations (or none)"></textarea>
+      <textarea class="field" name="notes" rows="2" placeholder="Anything else I should know? What has held you back?"></textarea>
+      <p id="err" class="text-sm hidden" style="color:#ff8a70">Please fill in your name, age, height, weight and all the dropdowns.</p>
+      <button class="cta mt-1" type="submit">Send to WhatsApp</button>
+    </form>
+    <div id="done" class="hidden py-8 text-center">
+      <div class="mx-auto mb-4 grid h-14 w-14 place-items-center rounded-full" style="background:rgba(255,90,54,.12);color:var(--accent)">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.500" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg>
+      </div>
+      <h3 class="display text-3xl font-extrabold">Opening WhatsApp</h3>
+      <p class="mt-2 text-sm" style="color:var(--muted)">Press send in WhatsApp to deliver your application. I&rsquo;ll reply there.</p>
+      <a id="wa-link" class="link mt-5 justify-center" href="#" target="_blank" rel="noopener">WhatsApp didn&rsquo;t open? Tap here</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ===== EDIT THESE ===== */
+const CONFIG = {
+  tiktok:   "https://www.tiktok.com/@manoliftss",
+  instagram:"https://www.instagram.com/marwan.elabassiry",
+  youtube:  "https://youtube.com/@manoegolifts",
+  whatsapp: "https://wa.me/201142293752",
+  email:    "mailto:mano.fitscollab@gmail.com",
+  // Paste your Google Form / Typeform link to send applicants there instead of the built-in form.
+  // When set, every Apply button opens it in a new tab.
+  waNumber: "201142293752",   // applications are sent to this WhatsApp number (country code + number, no + or 0)
+  applyUrl: ""                 // leave empty to use the built-in fitness form
+};
+/* ====================== */
+document.querySelectorAll('[data-link]').forEach(a => { a.href = CONFIG[a.dataset.link] || '#'; });
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+const modal = document.getElementById('modal'), form = document.getElementById('apply'),
+      done = document.getElementById('done'), err = document.getElementById('err');
+let lastFocus = null;
+
+function openModal(){
+  if (CONFIG.applyUrl) { window.open(CONFIG.applyUrl, '_blank', 'noopener'); return; }
+  lastFocus = document.activeElement;
+  form.classList.remove('hidden'); done.classList.add('hidden'); err.classList.add('hidden');
+  modal.classList.add('open'); modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => form.elements.name.focus(), 50);
+}
+function closeModal(){
+  modal.classList.remove('open'); modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow = ''; if (lastFocus) lastFocus.focus();
+}
+document.querySelectorAll('[data-open-modal]').forEach(b => b.addEventListener('click', openModal));
+document.getElementById('m-close').addEventListener('click', closeModal);
+modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
+
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const d = Object.fromEntries(new FormData(form));
+  const need = ['name','age','height','weight','goal','experience','days','gym'];
+  if (need.some(k => !String(d[k] || '').trim())) { err.classList.remove('hidden'); return; }
+  err.classList.add('hidden');
+  const v = k => (d[k] || '').trim() || 'N/A';
+  const msg = [
+    '*New application: The Ultimate Physique Guide*', '',
+    'Name: ' + v('name'),
+    'Age: ' + v('age'),
+    'Height: ' + v('height'),
+    'Weight: ' + v('weight'),
+    'Handle: ' + v('handle'),
+    'Main goal: ' + v('goal'),
+    'Experience: ' + v('experience'),
+    'Training days: ' + v('days'),
+    'Where they train: ' + v('gym'),
+    'Injuries: ' + v('injuries'),
+    'Notes: ' + v('notes')
+  ].join('\n');
+  const url = 'https://wa.me/' + CONFIG.waNumber + '?text=' + encodeURIComponent(msg);
+  document.getElementById('wa-link').href = url;
+  form.reset(); form.classList.add('hidden'); done.classList.remove('hidden');
+  const w = window.open(url, '_blank');
+  if (!w) window.location.href = url;
+});
+</script>
+</body>
+</html>
